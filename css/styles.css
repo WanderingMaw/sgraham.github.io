@@ -1,0 +1,127 @@
+/* Declare variables */
+:root {
+	--background-color: #4D4351;
+	--background-color-2: #5C3F70;
+	--block-color: #B3A7B8;
+	--button-color: #CC3200;
+	--outline-color: #FF6C31;
+	--text-color: #fff;
+	--text-shadow: #3f3f3f;
+	--input-hover: LightCyan;
+	--input-focus: DeepSkyBlue;
+	--placeholder-color: #aaa;
+}
+
+/* set background colors alternating for each section */
+.primary-bg {
+	background-color: var(--background-color);
+}
+
+.secondary-bg {
+	background-color: var(--background-color-2);
+}
+
+/* forceful override of button colors */
+#showcase-btn {
+	background-color: var(--button-color); 
+	border-color: var(--button-color);
+}
+
+#showcase-btn:hover {
+	background-color: var(--outline-color);
+}
+
+.text-shadow {
+	text-shadow: 3px 3px 3px var(--text-shadow);
+}
+
+#contact-btn {
+	background-color: var(--button-color); 
+	border-color: var(--button-color);
+}
+
+#contact-btn:hover {
+	background-color: var(--outline-color);
+}
+
+/* coloring of icons */
+.icon-styles {
+	color: var(--outline-color);
+}
+
+/* give a background to the showcase */
+#showcase {
+	background-image: url("../images/showcase-bg-mobile.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: 30%;
+}
+
+/* create a "timeline" line to run behind all the event images */
+.abt-img::before {
+	position: absolute;
+	background-color: var(--outline-color);
+	content: " ";
+	width: 3px;
+	left: 50%;
+	top: 0;
+	height: 100%;
+}
+
+/* give the about images an outline color */
+.abt-img img{
+	background-color: var(--outline-color);
+}
+
+/* styles for "Your Next Hire" bubble */
+.abt-img h4 {
+	background-color: var(--button-color);
+	border: var(--outline-color) 0.5rem solid;
+	aspect-ratio: 1/1;
+}
+
+/* give cv image outline color */
+#cv-left img {
+	background-color: var(--outline-color);
+}
+
+/* give contact section a background image */
+#contact {
+	background-image: url("../images/contact-mobile.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+	#showcase {
+		background-image: url("../images/showcase-bg-tablet.jpg");
+		background-position-y: 10%;
+	}
+	
+	#contact {
+		background-image: url("../images/contact-tablet.jpg");
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) {
+	#showcase {
+		background-image: url("../images/showcase-bg-sm-desktop.jpg");
+	}
+	
+	#contact {
+		background-image: url("../images/contact-sm.jpg");
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	#showcase {
+		background-image: url("../images/showcase-bg-lg-desktop.jpg");
+	}
+	
+	#contact {
+		background-image: url("../images/contact-lg.jpg");
+	}
+}
